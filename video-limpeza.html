@@ -10,7 +10,18 @@
         .video-container { max-width: 420px; width: 100%; text-align: center; background: #000000; padding: 25px; border-radius: 30px; box-shadow: 0 0 30px rgba(227, 30, 36, 0.15); border: 1px solid #1a1a1a; }
         .video-card { margin-bottom: 30px; }
         h2 { font-size: 18px; text-transform: uppercase; color: #e31e24; margin-bottom: 15px; letter-spacing: 2px; }
-        video { width: 100%; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.5); border: 1px solid #333; }
+        
+        /* CSS PARA CORRIGIR A ROTAÇÃO */
+        video { 
+            width: 100%; 
+            border-radius: 15px; 
+            box-shadow: 0 5px 15px rgba(0,0,0,0.5); 
+            border: 1px solid #333;
+            /* Gira o vídeo 180 graus (de ponta cabeça) */
+            transform: rotate(180deg); 
+            -webkit-transform: rotate(180deg);
+        }
+        
         .btn-back { display: inline-block; margin-top: 20px; color: #ffffff; text-decoration: none; font-size: 12px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; border: 1px solid #e31e24; padding: 12px 25px; border-radius: 10px; transition: all 0.3s ease; background: rgba(227, 30, 36, 0.1); }
         .btn-back:hover { background: #e31e24; box-shadow: 0 0 15px rgba(227, 30, 36, 0.4); }
     </style>
@@ -20,11 +31,11 @@
         <h2>Limpeza e Descarbonização</h2>
         <div class="video-card">
             <p style="font-size: 11px; color: #888;">Soldagem de Precisão</p>
-            <video id="video1" controls autoplay muted><source src="CAT.mp4" type="video/mp4"></video>
+            <video id="video1" controls autoplay muted playsinline><source src="CAT.mp4" type="video/mp4"></video>
         </div>
         <div class="video-card">
             <p style="font-size: 11px; color: #888;">Reparo de Catalisadores</p>
-            <video id="video2" controls><source src="CAT1.mp4" type="video/mp4"></video>
+            <video id="video2" controls playsinline><source src="CAT1.mp4" type="video/mp4"></video>
         </div>
         <a href="index.html" class="btn-back">⬅ Voltar ao Catálogo</a>
     </div>
