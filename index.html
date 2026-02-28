@@ -3,150 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Euro Diesel - Premium Service</title>
+    <title>Euro Diesel | High Performance</title>
     <style>
-        /* Importando fonte moderna */
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap');
 
         body { 
-            margin: 0; 
-            padding: 20px; 
-            background: linear-gradient(135deg, #1a1a1a 0%, #000000 100%);
-            font-family: 'Poppins', sans-serif; 
-            display: flex; 
-            justify-content: center; 
-            color: #ffffff;
-            min-height: 100vh;
+            margin: 0; padding: 20px; 
+            background: #050505; 
+            font-family: 'Montserrat', sans-serif; 
+            display: flex; justify-content: center; 
+            color: #ffffff; min-height: 100vh;
         }
 
         .container { 
-            max-width: 420px; 
-            width: 100%; 
-            background: rgba(255, 255, 255, 0.05); 
-            backdrop-filter: blur(10px);
-            border-radius: 30px; 
+            max-width: 420px; width: 100%; 
+            background: #000000; border-radius: 40px; 
             overflow: hidden; 
-            box-shadow: 0 20px 40px rgba(0,0,0,0.5); 
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.9), 0 0 20px rgba(227, 30, 36, 0.15); 
+            border: 1px solid #1a1a1a;
         }
         
-        /* CABEÇALHO SOFISTICADO */
         .header { 
-            background: #000000; 
-            padding: 40px 20px; 
-            text-align: center; 
+            background: linear-gradient(180deg, #121212 0%, #000000 100%); 
+            padding: 55px 20px; text-align: center; 
             border-bottom: 3px solid #e31e24; 
+            position: relative;
         }
+
         .brand { 
-            font-size: 32px; 
-            font-weight: 700; 
-            letter-spacing: 4px; 
-            color: #ffffff; 
-            margin: 0; 
-            text-transform: uppercase; 
+            font-size: 34px; font-weight: 800; letter-spacing: 5px; 
+            color: #ffffff; margin: 0; text-transform: uppercase;
+            text-shadow: 0 0 15px rgba(227, 30, 36, 0.3);
         }
+
         .slogan { 
-            font-size: 11px; 
-            letter-spacing: 6px; 
-            color: #e31e24; 
-            margin-top: 8px; 
-            text-transform: uppercase; 
-            display: block; 
-            font-weight: 300; 
+            font-size: 11px; letter-spacing: 7px; color: #e31e24; 
+            margin-top: 12px; text-transform: uppercase; display: block; font-weight: 600; 
         }
         
-        .content { padding: 30px; }
+        .content { padding: 25px; }
         
-        /* ITENS DE SERVIÇO COM EFEITO GLASS */
         .service-item { 
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            padding: 18px; 
-            margin-bottom: 15px; 
-            border-radius: 15px;
-            transition: all 0.3s ease; 
+            background: linear-gradient(145deg, #0d0d0d 0%, #050505 100%);
+            border: 1px solid #1a1a1a;
+            padding: 22px; margin-bottom: 18px; 
+            border-radius: 22px;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
         }
+        
         .service-item:hover { 
-            transform: translateY(-3px); 
-            background: rgba(255, 255, 255, 0.08);
+            transform: scale(1.03); 
             border-color: #e31e24;
+            box-shadow: 0 10px 25px rgba(227, 30, 36, 0.25);
         }
         
         .service-link { text-decoration: none; display: flex; align-items: center; }
         
-        /* Emojis estilizados */
         .service-icon {
-            font-size: 24px;
-            margin-right: 15px;
-            width: 30px;
-            text-align: center;
+            font-size: 28px; margin-right: 20px;
+            filter: drop-shadow(0 0 5px rgba(227, 30, 36, 0.5));
         }
-        
-        .service-text { flex: 1; }
         
         .service-title { 
-            font-weight: 600; 
-            font-size: 14px; 
-            text-transform: uppercase; 
-            color: #ffffff; 
-            letter-spacing: 0.5px; 
-            margin-bottom: 2px;
+            font-weight: 700; font-size: 13px; 
+            text-transform: uppercase; color: #ffffff; 
+            letter-spacing: 1.2px; margin-bottom: 4px;
         }
+
         .service-desc { 
-            font-size: 11px; 
-            color: #aaaaaa; 
-            line-height: 1.4; 
-            font-weight: 300;
+            font-size: 11px; color: #888; 
+            line-height: 1.4; font-weight: 400;
         }
         
-        /* BOTÃO PROFISSIONAL COM ANIMAÇÃO */
         .btn-contact { 
             display: block; 
-            background: linear-gradient(90deg, #e31e24 0%, #b31014 100%); 
-            color: #ffffff; 
-            text-align: center; 
-            padding: 18px; 
-            text-decoration: none; 
-            font-weight: 600; 
-            border-radius: 15px; 
-            text-transform: uppercase; 
-            letter-spacing: 1.5px; 
-            font-size: 13px; 
-            margin-top: 35px;
-            box-shadow: 0 5px 15px rgba(227, 30, 36, 0.3);
-            transition: all 0.3s ease;
+            background: linear-gradient(90deg, #e31e24 0%, #9e1115 100%); 
+            color: #ffffff; text-align: center; 
+            padding: 22px; text-decoration: none; 
+            font-weight: 800; border-radius: 20px; 
+            text-transform: uppercase; letter-spacing: 3px; 
+            font-size: 13px; margin-top: 30px;
+            box-shadow: 0 10px 20px rgba(227, 30, 36, 0.4);
+            transition: 0.3s ease;
         }
-        .btn-contact:hover {
-            box-shadow: 0 8px 20px rgba(227, 30, 36, 0.5);
-            transform: scale(1.02);
-        }
+
+        .btn-contact:hover { transform: translateY(-3px); box-shadow: 0 15px 25px rgba(227, 30, 36, 0.5); }
         
-        /* REDES SOCIAIS */
         .social-area { 
-            text-align: center; 
-            padding: 25px; 
-            background: rgba(0, 0, 0, 0.2); 
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            text-align: center; padding: 30px; 
+            background: #030303; border-top: 1px solid #1a1a1a;
         }
-        .social-title { 
-            font-size: 10px; 
-            font-weight: 600; 
-            margin-bottom: 15px; 
-            color: #777777; 
-            letter-spacing: 3px; 
-        }
-        .social-icons a { text-decoration: none; margin: 0 10px; display: inline-block; transition: all 0.3s ease; }
-        .social-icons img { width: 22px; height: 22px; opacity: 0.7; transition: all 0.3s ease; }
-        .social-icons a:hover img { opacity: 1; transform: scale(1.1); }
+
+        .social-icons img { width: 26px; height: 26px; opacity: 0.6; margin: 0 15px; transition: 0.3s; filter: invert(1); }
+        .social-icons img:hover { opacity: 1; transform: scale(1.25); }
         
         .footer { 
-            text-align: center; 
-            padding: 25px; 
-            font-size: 10px; 
-            color: #666666; 
-            background: #000000;
-            line-height: 1.6;
-            font-weight: 300;
+            text-align: center; padding: 35px 20px; 
+            font-size: 10px; color: #555; 
+            background: #000000; letter-spacing: 1.5px;
+            border-top: 1px solid #1a1a1a;
         }
     </style>
 </head>
@@ -159,99 +114,101 @@
     </div>
 
     <div class="content">
+        
         <div class="service-item">
-            <a href="#" class="service-link" target="_blank">
-                <span class="service-icon">🔍</span>
+            <a href="#" class="service-link">
+                <span class="service-icon">🖥️</span>
                 <div class="service-text">
-                    <div class="service-title">Diagnóstico de Falhas</div>
-                    <div class="service-desc">Scanner avançado para sistemas eletrônicos.</div>
+                    <div class="service-title">Diagnóstico Computadorizado Avançado</div>
+                    <div class="service-desc">Tecnologia de ponta especializada em Scania e Volvo.</div>
                 </div>
             </a>
         </div>
         
         <div class="service-item">
-            <a href="#" class="service-link" target="_blank">
+            <a href="#" class="service-link">
                 <span class="service-icon">💻</span>
                 <div class="service-text">
-                    <div class="service-title">Reprogramação (Remap)</div>
-                    <div class="service-desc">Aumento de potência e redução de consumo.</div>
+                    <div class="service-title">Reprogramação de Injeção</div>
+                    <div class="service-desc">Otimização eletrônica para máxima potência e economia.</div>
                 </div>
             </a>
         </div>
 
         <div class="service-item">
-            <a href="#" class="service-link" target="_blank">
-                <span class="service-icon">🛠️</span>
+            <a href="#" class="service-link">
+                <span class="service-icon">🔥</span>
                 <div class="service-text">
-                    <div class="service-title">Reparo de Módulos (ECU)</div>
-                    <div class="service-desc">Recuperação técnica de centrais eletrônicas.</div>
+                    <div class="service-title">Limpeza e Descarbonização</div>
+                    <div class="service-desc">Processo avançado para catalisadores e filtros.</div>
                 </div>
             </a>
         </div>
 
         <div class="service-item">
-    <a href="video-scr.html" class="service-link">
-        <span class="service-icon">🧪</span>
-        <div class="service-text">
-            <div class="service-title">Sistema SCR (Arla 32)</div>
-            <div class="service-desc">Manutenção em bomba, dosador e sensores NOx.</div>
-        </div>
-    </a>
-</div>
-
-        <div class="service-item">
-            <a href="#" class="service-link" target="_blank">
-                <span class="service-icon">⚙️</span>
-                <div class="service-title">Válvulas APS / APM</div>
-                <div class="service-desc">Manutenção técnica em válvulas Scania/Volvo.</div>
+            <a href="video-scr.html" class="service-link">
+                <span class="service-icon">🧪</span>
+                <div class="service-text">
+                    <div class="service-title">Sistema SCR Arla 32</div>
+                    <div class="service-desc">Soluções definitivas em pós-tratamento.</div>
+                </div>
             </a>
         </div>
 
         <div class="service-item">
-            <a href="video-cambio.html" class="service-link" target="_blank">
+            <a href="#" class="service-link">
+                <span class="service-icon">🎈</span>
+                <div class="service-text">
+                    <div class="service-title">Suspensão a Ar</div>
+                    <div class="service-desc">Manutenção e calibração de sistemas pneumáticos.</div>
+                </div>
+            </a>
+        </div>
+
+        <div class="service-item">
+            <a href="#" class="service-link">
+                <span class="service-icon">⚙️</span>
+                <div class="service-text">
+                    <div class="service-title">Válvulas APS e APM</div>
+                    <div class="service-desc">Reparo especializado e preventivo.</div>
+                </div>
+            </a>
+        </div>
+
+        <div class="service-item">
+            <a href="#" class="service-link">
+                <span class="service-icon">🛑</span>
+                <div class="service-text">
+                    <div class="service-title">ABS e EBS</div>
+                    <div class="service-desc">Controle e segurança para cavalo e carreta.</div>
+                </div>
+            </a>
+        </div>
+
+        <div class="service-item">
+            <a href="video-cambio.html" class="service-link">
                 <span class="service-icon">🕹️</span>
                 <div class="service-text">
                     <div class="service-title">Câmbio Automatizado</div>
-                    <div class="service-desc">Revisão de atuadores e calibração.</div>
+                    <div class="service-desc">Ajustes finos e calibração eletrônica de transmissão.</div>
                 </div>
             </a>
         </div>
 
         <div class="service-item">
-            <a href="#" class="service-link" target="_blank">
-                <span class="service-icon">🛑</span>
-                <div class="service-text">
-                    <div class="service-title">Freios ABS/EBS</div>
-                    <div class="service-desc">Manutenção em cavalos e carretas.</div>
-                </div>
-            </a>
-        </div>
-
-        <div class="service-item">
-            <a href="#" class="service-link" target="_blank">
+            <a href="#" class="service-link">
                 <span class="service-icon">📦</span>
                 <div class="service-text">
-                    <div class="service-title">Venda de Sensores</div>
-                    <div class="service-desc">Linha completa de sensores de pressão e rotação.</div>
-                </div>
-            </a>
-        </div>
-        
-        <div class="service-item">
-            <a href="#" class="service-link" target="_blank">
-                <span class="service-icon">🎈</span>
-                <div class="service-text">
-                    <div class="service-title">Suspensão Eletrônica</div>
-                    <div class="service-desc">Reparo em sensores de altura e válvulas de nível.</div>
+                    <div class="service-title">Vendas de Peças Novas</div>
+                    <div class="service-desc">Amplo estoque de componentes eletrônicos diesel.</div>
                 </div>
             </a>
         </div>
 
-        <a href="https://wa.me/5569981128233?text=Olá,%20gostaria%20de%20falar%20com%20um%20especialista" class="btn-contact">Falar com Consultor</a>
+        <a href="https://wa.me/5569981128233?text=Olá,%20gostaria%20de%20falar%20com%20um%20consultor" class="btn-contact">Falar com Consultor</a>
     </div>
 
     <div class="social-area">
-        <div class="social-title">CONECTE-SE CONOSCO</div>
         <div class="social-icons">
             <a href="https://www.instagram.com/euro_diesel_01/"><img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram"></a>
             <a href="https://www.youtube.com/@euro_diesel_01"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube"></a>
@@ -260,8 +217,8 @@
     </div>
 
     <div class="footer">
-        RODOVIA BR-364, KM 06, VILHENA - RO<br>
-        <strong>Tecnologia e Confiança Diesel</strong>
+        BR-364, KM 06 - VILHENA/RO<br>
+        <strong>EURO DIESEL | HIGH PERFORMANCE</strong>
     </div>
 </div>
 
