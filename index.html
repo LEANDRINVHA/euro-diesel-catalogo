@@ -3,21 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>EURO DIESEL | High Performance</title>
-
-    <meta property="og:title" content="EURO DIESEL | High Performance">
-    <meta property="og:description" content="Especialistas em Diagnóstico e Reprogramação Automotiva.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://leandrinvha.github.io/euro-diesel-catalogo/">
-
-    <meta property="og:image" content="https://i.imgur.com/js8TH2T.jpeg"> 
+    <title>Euro Diesel | High Performance</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap');
 
         body { 
             margin: 0; padding: 20px; 
-            background: #050505; 
+            background: #000000;
             font-family: 'Montserrat', sans-serif; 
             display: flex; justify-content: center; 
             color: #ffffff; min-height: 100vh;
@@ -25,92 +17,167 @@
 
         .container { 
             max-width: 420px; width: 100%; 
-            background: #000000; border-radius: 40px; 
+            background: #0a0a0a;
+            border-radius: 40px; 
             overflow: hidden; 
-            box-shadow: 0 25px 50px rgba(0,0,0,0.9), 0 0 20px rgba(227, 30, 36, 0.15); 
+            box-shadow: 0 0 50px rgba(0,0,0,0.8), 0 0 20px rgba(227, 30, 36, 0.1); 
             border: 1px solid #1a1a1a;
+            position: relative;
+        }
+        
+        .container::before {
+            content: '';
+            position: absolute; top: 0; left: 50%;
+            transform: translateX(-50%);
+            width: 80%; height: 2px;
+            background: linear-gradient(90deg, transparent, #e31e24, transparent);
+            box-shadow: 0 0 20px #e31e24;
         }
 
         .header { 
             background: linear-gradient(180deg, #121212 0%, #000000 100%); 
-            padding: 55px 20px; text-align: center; 
-            border-bottom: 3px solid #e31e24; 
-            position: relative;
+            padding: 60px 20px; text-align: center; 
+            border-bottom: 2px solid #222;
         }
 
         .brand { 
-            font-size: 34px; font-weight: 800; letter-spacing: 5px; 
+            font-size: 38px; font-weight: 800; letter-spacing: 8px; 
             color: #ffffff; margin: 0; text-transform: uppercase;
-            text-shadow: 0 0 15px rgba(227, 30, 36, 0.3);
+            text-shadow: 0 0 15px rgba(255, 255, 255, 0.5), 0 0 30px rgba(227, 30, 36, 0.5);
         }
 
         .slogan { 
-            font-size: 11px; letter-spacing: 7px; color: #e31e24; 
-            margin-top: 12px; text-transform: uppercase; display: block; font-weight: 600; 
+            font-size: 11px; letter-spacing: 8px; color: #e31e24; 
+            margin-top: 15px; text-transform: uppercase; display: block; font-weight: 700;
+            text-shadow: 0 0 10px rgba(227, 30, 36, 0.5);
         }
-
-        .content { padding: 25px; }
-
+        
+        .content { padding: 30px 25px; }
+        
+        /* ANIMAÇÃO DE ENTRADA */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
         .service-item { 
-            background: linear-gradient(145deg, #0d0d0d 0%, #050505 100%);
+            background: #050505;
             border: 1px solid #1a1a1a;
-            padding: 22px; margin-bottom: 18px; 
-            border-radius: 22px;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+            padding: 25px; margin-bottom: 20px; 
+            border-radius: 25px;
+            transition: all 0.3s ease-in-out;
+            position: relative;
+            
+            /* Aplica a animação em cada item com delay progressivo */
+            animation: fadeInUp 0.5s ease forwards;
+            opacity: 0;
         }
-
+        
+        .service-item:nth-child(1) { animation-delay: 0.1s; }
+        .service-item:nth-child(2) { animation-delay: 0.15s; }
+        .service-item:nth-child(3) { animation-delay: 0.2s; }
+        .service-item:nth-child(4) { animation-delay: 0.25s; }
+        .service-item:nth-child(5) { animation-delay: 0.3s; }
+        .service-item:nth-child(6) { animation-delay: 0.35s; }
+        .service-item:nth-child(7) { animation-delay: 0.4s; }
+        .service-item:nth-child(8) { animation-delay: 0.45s; }
+        .service-item:nth-child(9) { animation-delay: 0.5s; }
+        
+        /* HOVER E ANIMAÇÃO DO ÍCONE */
+        @keyframes shake {
+            0% { transform: rotate(0deg); }
+            25% { transform: rotate(5deg); }
+            50% { transform: rotate(0deg); }
+            75% { transform: rotate(-5deg); }
+            100% { transform: rotate(0deg); }
+        }
+        
         .service-item:hover { 
-            transform: scale(1.03); 
+            transform: translateY(-5px); 
             border-color: #e31e24;
-            box-shadow: 0 10px 25px rgba(227, 30, 36, 0.25);
+            background: #111;
+            box-shadow: 0 10px 30px rgba(227, 30, 36, 0.25);
         }
-
+        
+        .service-item:hover .service-icon {
+            animation: shake 0.5s ease;
+        }
+        
         .service-link { text-decoration: none; display: flex; align-items: center; }
-
+        
         .service-icon {
-            font-size: 28px; margin-right: 20px;
-            filter: drop-shadow(0 0 5px rgba(227, 30, 36, 0.5));
+            font-size: 32px; margin-right: 20px;
+            filter: drop-shadow(0 0 8px rgba(227, 30, 36, 0.6));
+            transition: 0.3s;
         }
-
+        
         .service-title { 
-            font-weight: 700; font-size: 13px; 
+            font-weight: 700; font-size: 14px; 
             text-transform: uppercase; color: #ffffff; 
-            letter-spacing: 1.2px; margin-bottom: 4px;
+            letter-spacing: 1.5px; margin-bottom: 5px;
+            transition: 0.3s;
+        }
+        
+        .service-item:hover .service-title {
+            color: #e31e24;
+            text-shadow: 0 0 10px rgba(227, 30, 36, 0.6);
         }
 
         .service-desc { 
-            font-size: 11px; color: #888; 
-            line-height: 1.4; font-weight: 400;
+            font-size: 12px; color: #999; 
+            line-height: 1.5; font-weight: 300;
         }
-
+        
+        /* EFEITO PULSAR DO BOTÃO */
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(227, 30, 36, 0.5); }
+            70% { box-shadow: 0 0 0 15px rgba(227, 30, 36, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(227, 30, 36, 0); }
+        }
+        
         .btn-contact { 
             display: block; 
-            background: linear-gradient(90deg, #e31e24 0%, #9e1115 100%); 
+            background: #e31e24;
             color: #ffffff; text-align: center; 
-            padding: 22px; text-decoration: none; 
+            padding: 25px; text-decoration: none; 
             font-weight: 800; border-radius: 20px; 
-            text-transform: uppercase; letter-spacing: 3px; 
-            font-size: 13px; margin-top: 30px;
-            box-shadow: 0 10px 20px rgba(227, 30, 36, 0.4);
-            transition: 0.3s ease;
+            text-transform: uppercase; letter-spacing: 4px; 
+            font-size: 14px; margin-top: 40px;
+            
+            /* Animação pulsar */
+            animation: pulse 2s infinite;
+            transition: all 0.3s ease;
         }
 
-        .btn-contact:hover { transform: translateY(-3px); box-shadow: 0 15px 25px rgba(227, 30, 36, 0.5); }
-
+        .btn-contact:hover { 
+            background: #ffffff;
+            color: #000000;
+            box-shadow: 0 0 30px #ffffff;
+            animation: none; /* Para a pulsação ao passar o mouse */
+        }
+        
         .social-area { 
-            text-align: center; padding: 30px; 
-            background: #030303; border-top: 1px solid #1a1a1a;
+            text-align: center; padding: 40px 30px; 
+            background: #050505; border-top: 1px solid #1a1a1a;
         }
 
-        .social-icons img { width: 26px; height: 26px; opacity: 0.6; margin: 0 15px; transition: 0.3s; filter: invert(1); }
-        .social-icons img:hover { opacity: 1; transform: scale(1.25); }
-
+        .social-icons img { 
+            width: 28px; height: 28px; opacity: 0.5; 
+            margin: 0 15px; transition: 0.3s; 
+            filter: invert(1); 
+        }
+        .social-icons img:hover { 
+            opacity: 1; transform: scale(1.2); 
+            filter: invert(0) drop-shadow(0 0 10px #ffffff);
+        }
+        
         .footer { 
-            text-align: center; padding: 35px 20px; 
-            font-size: 10px; color: #555; 
-            background: #000000; letter-spacing: 1.5px;
+            text-align: center; padding: 40px 20px; 
+            font-size: 11px; color: #666; 
+            background: #000000; letter-spacing: 2px;
             border-top: 1px solid #1a1a1a;
         }
+        .footer strong { color: #888; }
     </style>
 </head>
 <body>
@@ -122,23 +189,23 @@
     </div>
 
     <div class="content">
-
+        
         <div class="service-item">
             <a href="#" class="service-link">
                 <span class="service-icon">🖥️</span>
                 <div class="service-text">
-                    <div class="service-title">Diagnóstico Computadorizado Avançado</div>
-                    <div class="service-desc">Tecnologia de ponta especializada em Scania e Volvo.</div>
+                    <div class="service-title">Diagnóstico Computadorizado</div>
+                    <div class="service-desc">Especialistas avançados em Scania e Volvo.</div>
                 </div>
             </a>
         </div>
-
+        
         <div class="service-item">
             <a href="#" class="service-link">
                 <span class="service-icon">💻</span>
                 <div class="service-text">
                     <div class="service-title">Reprogramação de Injeção</div>
-                    <div class="service-desc">Otimização eletrônica para máxima potência e economia.</div>
+                    <div class="service-desc">Otimização eletrônica de alta performance.</div>
                 </div>
             </a>
         </div>
@@ -148,7 +215,7 @@
                 <span class="service-icon">🔥</span>
                 <div class="service-text">
                     <div class="service-title">Limpeza e Descarbonização</div>
-                    <div class="service-desc">Processo avançado para catalisadores e filtros.</div>
+                    <div class="service-desc">Recuperação técnica de catalisadores.</div>
                 </div>
             </a>
         </div>
@@ -158,7 +225,7 @@
                 <span class="service-icon">🧪</span>
                 <div class="service-text">
                     <div class="service-title">Sistema SCR Arla 32</div>
-                    <div class="service-desc">Soluções definitivas em pós-tratamento.</div>
+                    <div class="service-desc">Engenharia e manutenção de precisão.</div>
                 </div>
             </a>
         </div>
@@ -168,7 +235,7 @@
                 <span class="service-icon">🎈</span>
                 <div class="service-text">
                     <div class="service-title">Suspensão a Ar</div>
-                    <div class="service-desc">Manutenção e calibração de sistemas pneumáticos.</div>
+                    <div class="service-desc">Diagnóstico e calibração pneumática.</div>
                 </div>
             </a>
         </div>
@@ -178,7 +245,7 @@
                 <span class="service-icon">⚙️</span>
                 <div class="service-text">
                     <div class="service-title">Válvulas APS e APM</div>
-                    <div class="service-desc">Reparo especializado e preventivo.</div>
+                    <div class="service-desc">Manutenção técnica especializada.</div>
                 </div>
             </a>
         </div>
@@ -188,7 +255,7 @@
                 <span class="service-icon">🛑</span>
                 <div class="service-text">
                     <div class="service-title">ABS e EBS</div>
-                    <div class="service-desc">Controle e segurança para cavalo e carreta.</div>
+                    <div class="service-desc">Segurança para cavalos e carretas.</div>
                 </div>
             </a>
         </div>
@@ -198,7 +265,7 @@
                 <span class="service-icon">🕹️</span>
                 <div class="service-text">
                     <div class="service-title">Câmbio Automatizado</div>
-                    <div class="service-desc">Ajustes finos e calibração eletrônica.</div>
+                    <div class="service-desc">Revisão, atuadores e calibração fina.</div>
                 </div>
             </a>
         </div>
@@ -208,7 +275,7 @@
                 <span class="service-icon">📦</span>
                 <div class="service-text">
                     <div class="service-title">Vendas de Peças Novas</div>
-                    <div class="service-desc">Amplo estoque de componentes eletrônicos diesel.</div>
+                    <div class="service-desc">Componentes eletrônicos de alta qualidade.</div>
                 </div>
             </a>
         </div>
