@@ -1,105 +1,477 @@
 <!DOCTYPE html>
+
 <html lang="pt-br">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     
-    <title>EURO DIESEL | Player de Vídeos</title>
-    
+
+    <title>EURO DIESEL | High Performance</title>
+
+    <meta property="og:title" content="EURO DIESEL | High Performance">
+
+    <meta property="og:description" content="Especialistas em Diagnóstico e Reprogramação Automotiva.">
+
+    <meta property="og:type" content="website">
+
+    <meta property="og:url" content="https://leandrinvha.github.io/euro-diesel-catalogo/">
+
+    <meta property="og:image" content=""> 
+
+
+
     <style>
+
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&display=swap');
 
+
+
         body { 
+
             margin: 0; padding: 20px; 
+
             background: #050505; 
+
             font-family: 'Montserrat', sans-serif; 
+
             display: flex; justify-content: center; 
+
             color: #ffffff; min-height: 100vh;
+
             background-image: radial-gradient(white, rgba(255,255,255,.1) 1px, transparent 2px);
+
             background-size: 50px 50px;
+
         }
+
+
 
         .container { 
+
             max-width: 420px; width: 100%; 
+
             background: #000000; border-radius: 40px; 
+
             overflow: hidden; 
+
             box-shadow: 0 25px 50px rgba(0,0,0,0.9), 0 0 20px rgba(227, 30, 36, 0.15); 
+
             border: 1px solid #1a1a1a;
+
         }
+
+
 
         .header { 
+
             background: linear-gradient(180deg, #121212 0%, #000000 100%); 
-            padding: 30px 15px; text-align: center; 
+
+            padding: 55px 15px; text-align: center; 
+
             border-bottom: 3px solid #e31e24; 
+
         }
+
+
 
         .brand { 
-            font-size: 32px; font-weight: 900; letter-spacing: 2px; 
+
+            font-size: 42px; font-weight: 900; letter-spacing: 2px; 
+
             margin: 0; text-transform: uppercase;
+
+            white-space: nowrap;
+
             background: linear-gradient(to bottom, #ffffff 0%, #e1e1e1 45%, #777 50%, #ffffff 100%);
+
             -webkit-background-clip: text;
+
             -webkit-text-fill-color: transparent;
+
             filter: drop-shadow(0 0 10px rgba(255,255,255,0.2));
+
         }
 
-        .content { padding: 0; }
 
-        /* Container do Vídeo Responsivo */
-        .video-wrapper {
-            position: relative;
-            padding-bottom: 56.25%; /* Proporção 16:9 */
-            height: 0;
-            overflow: hidden;
-            background-color: #000;
+
+        .slogan { 
+
+            font-size: 11px; letter-spacing: 7px; color: #e31e24; 
+
+            margin-top: 12px; text-transform: uppercase; display: block; font-weight: 600; 
+
         }
 
-        .video-wrapper iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: none;
+
+
+        .content { padding: 25px; }
+
+
+
+        .service-item { 
+
+            background: linear-gradient(145deg, #0d0d0d 0%, #050505 100%);
+
+            border: 1px solid #1a1a1a;
+
+            padding: 22px; margin-bottom: 18px; 
+
+            border-radius: 22px;
+
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+
         }
 
-        .back-button {
-            display: block;
-            padding: 20px;
+
+
+        .service-item:hover { 
+
+            transform: scale(1.03); 
+
+            border-color: #e31e24;
+
+            box-shadow: 0 10px 25px rgba(227, 30, 36, 0.25);
+
+        }
+
+
+
+        .service-link { text-decoration: none; display: flex; align-items: center; }
+
+
+
+        .service-icon {
+
+            font-size: 28px; margin-right: 20px;
+
+            filter: drop-shadow(0 0 5px rgba(227, 30, 36, 0.5));
+
+        }
+
+
+
+        .service-title { 
+
+            font-weight: 700; font-size: 13px; 
+
+            text-transform: uppercase; color: #ffffff; 
+
+            letter-spacing: 1.2px; margin-bottom: 4px;
+
+        }
+
+
+
+        .service-desc { 
+
+            font-size: 11px; color: #888; 
+
+            line-height: 1.4; font-weight: 400;
+
+        }
+
+
+
+        @keyframes alertFlash {
+
+            0% { background-color: #e31e24; box-shadow: 0 0 10px #e31e24; color: #fff; }
+
+            50% { background-color: #ffffff; box-shadow: 0 0 35px #ffffff; color: #000; }
+
+            100% { background-color: #e31e24; box-shadow: 0 0 10px #e31e24; color: #fff; }
+
+        }
+
+
+
+        .btn-contact { 
+
+            display: block; 
+
+            padding: 22px; text-decoration: none; 
+
+            font-weight: 900; border-radius: 20px; 
+
+            text-transform: uppercase; letter-spacing: 3px; 
+
+            font-size: 14px; margin-top: 30px;
+
             text-align: center;
-            text-decoration: none;
-            color: #fff;
-            background: #111;
-            font-weight: 600;
-            text-transform: uppercase;
-            font-size: 12px;
-            letter-spacing: 2px;
-            border-top: 1px solid #222;
-            transition: 0.3s;
+
+            animation: alertFlash 0.8s infinite;
+
         }
-        
-        .back-button:hover { background: #e31e24; }
+
+
+
+        .social-area { 
+
+            text-align: center; padding: 30px; 
+
+            background: #030303; border-top: 1px solid #1a1a1a;
+
+        }
+
+
+
+        .social-icons img { width: 26px; opacity: 0.6; margin: 0 15px; transition: 0.3s; filter: invert(1); }
+
+        .social-icons img:hover { opacity: 1; transform: scale(1.25); filter: invert(0); }
+
+
+
+        .footer { 
+
+            text-align: center; padding: 35px 20px; 
+
+            font-size: 10px; color: #555; 
+
+            background: #000000; letter-spacing: 1.5px;
+
+            border-top: 1px solid #1a1a1a;
+
+        }
 
     </style>
+
 </head>
+
 <body>
 
+
+
 <div class="container">
+
     <div class="header">
+
         <h1 class="brand">EURO DIESEL</h1>
+
+        <span class="slogan">High Performance</span>
+
     </div>
+
+
 
     <div class="content">
-        <div class="video-wrapper">
-            <iframe 
-                src="https://www.youtube.com/embed/videoseries?list=SEU_ID_DA_PLAYLIST_AQUI&autoplay=1&mute=1&loop=1" 
-                allow="autoplay; fullscreen"
-                allowfullscreen>
-            </iframe>
+
+        <div class="service-item">
+
+            <a href="#" class="service-link">
+
+                <span class="service-icon">🖥️</span>
+
+                <div class="service-text">
+
+                    <div class="service-title">Diagnóstico Computadorizado</div>
+
+                    <div class="service-desc">Tecnologia avançada especializada em Scania e Volvo.</div>
+
+                </div>
+
+            </a>
+
         </div>
-        
-        <a href="index.html" class="back-button">← Voltar para Menu</a>
+
+
+
+        <div class="service-item">
+
+            <a href="#" class="service-link">
+
+                <span class="service-icon">💻</span>
+
+                <div class="service-text">
+
+                    <div class="service-title">Reprogramação de Injeção</div>
+
+                    <div class="service-desc">Otimização eletrônica para máxima potência e economia.</div>
+
+                </div>
+
+            </a>
+
+        </div>
+
+
+
+        <div class="service-item">
+
+            <a href="video-limpeza.html" class="service-link">
+
+                <span class="service-icon">🔥</span>
+
+                <div class="service-text">
+
+                    <div class="service-title">Limpeza e Descarbonização</div>
+
+                    <div class="service-desc">Processo avançado para catalisadores e filtros.</div>
+
+                </div>
+
+            </a>
+
+        </div>
+
+
+
+        <div class="service-item">
+
+            <a href="#" class="service-link">
+
+                <span class="service-icon">🧪</span>
+
+                <div class="service-text">
+
+                    <div class="service-title">Sistema SCR Arla 32</div>
+
+                    <div class="service-desc">Soluções definitivas em pós-tratamento e sensores.</div>
+
+                </div>
+
+            </a>
+
+        </div>
+
+
+
+        <div class="service-item">
+
+            <a href="suspensao.html" class="service-link">
+
+                <span class="service-icon">🎈</span>
+
+                <div class="service-text">
+
+                    <div class="service-title">Suspensão a Ar</div>
+
+                    <div class="service-desc">Vídeos: Manutenção e calibração de sistemas pneumáticos.</div>
+
+                </div>
+
+            </a>
+
+        </div>
+
+
+
+        <div class="service-item">
+
+            <a href="#" class="service-link">
+
+                <span class="service-icon">⚙️</span>
+
+                <div class="service-text">
+
+                    <div class="service-title">Válvulas APS e APM</div>
+
+                    <div class="service-desc">Reparo especializado e preventivo de válvulas.</div>
+
+                </div>
+
+            </a>
+
+        </div>
+
+
+
+        <div class="service-item">
+
+            <a href="#" class="service-link">
+
+                <span class="service-icon">🛑</span>
+
+                <div class="service-text">
+
+                    <div class="service-title">ABS e EBS</div>
+
+                    <div class="service-desc">Controle e segurança para cavalo e carreta.</div>
+
+                </div>
+
+            </a>
+
+        </div>
+
+
+
+        <div class="service-item">
+
+            <a href="video-cambio.html" class="service-link">
+
+                <span class="service-icon">🕹️</span>
+
+                <div class="service-text">
+
+                    <div class="service-title">Câmbio Automatizado</div>
+
+                    <div class="service-desc">Ajustes finos e calibração eletrônica de embreagem.</div>
+
+                </div>
+
+            </a>
+
+        </div>
+
+
+
+        <div class="service-item">
+
+            <a href="#" class="service-link">
+
+                <span class="service-icon">📦</span>
+
+                <div class="service-text">
+
+                    <div class="service-title">Vendas de Peças Novas</div>
+
+                    <div class="service-desc">Amplo estoque de componentes eletrônicos diesel.</div>
+
+                </div>
+
+            </a>
+
+        </div>
+
+
+
+        <a href="https://wa.me/5569981128233?text=Olá,%20gostaria%20de%20falar%20com%20um%20consultor" class="btn-contact">Falar com Consultor</a>
+
     </div>
+
+
+
+    <div class="social-area">
+
+        <div class="social-icons">
+
+            <a href="https://www.instagram.com/euro_diesel_01/"><img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram"></a>
+
+            <a href="https://www.youtube.com/@euro_diesel_01"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube"></a>
+
+            <a href="https://www.tiktok.com/@euro_diesel_01"><img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="TikTok"></a>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="footer">
+
+        BR-364, KM 06 - VILHENA/RO<br>
+
+        <strong>EURO DIESEL | HIGH PERFORMANCE</strong>
+
+    </div>
+
 </div>
 
+
+
 </body>
+
 </html>
