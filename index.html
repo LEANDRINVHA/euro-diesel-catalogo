@@ -3,46 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EURO DIESEL | LEO02</title>
+    <title>EURO DIESEL | LEO01 PRATA</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&display=swap');
 
         body { 
             margin: 0; padding: 20px; 
-            background: #000000; 
+            background: #050505; 
             font-family: 'Montserrat', sans-serif; 
             display: flex; justify-content: center; 
             color: #ffffff; min-height: 100vh;
-            /* Fundo de Grade Tecnológica (Grid) */
-            background-image: 
-                linear-gradient(rgba(227, 30, 36, 0.05) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(227, 30, 36, 0.05) 1px, transparent 1px);
-            background-size: 40px 40px;
+            background-image: radial-gradient(white, rgba(255,255,255,.1) 1px, transparent 2px);
+            background-size: 50px 50px;
         }
 
         .container { 
             max-width: 420px; width: 100%; 
-            background: linear-gradient(145deg, #0a0a0a 0%, #000000 100%);
-            border-radius: 40px; 
+            background: #000000; border-radius: 40px; 
             overflow: hidden; 
-            box-shadow: 0 0 60px rgba(0,0,0,1), inset 0 0 20px rgba(255,255,255,0.02); 
-            border: 1px solid #222;
-            position: relative;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.9), 0 0 20px rgba(227, 30, 36, 0.15); 
+            border: 1px solid #1a1a1a;
         }
 
-        /* HEADER DE LUXO - EFEITO METAL LÍQUIDO */
+        /* HEADER LEO01 COM NOME PRATA METÁLICO */
         .header { 
-            background: #000; 
-            padding: 65px 15px; text-align: center; 
-            border-bottom: 4px solid #e31e24;
-            position: relative;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            background: linear-gradient(180deg, #121212 0%, #000000 100%); 
+            padding: 55px 15px; text-align: center; 
+            border-bottom: 3px solid #e31e24; 
         }
 
         .brand { 
             font-size: 42px; font-weight: 900; letter-spacing: 2px; 
             margin: 0; text-transform: uppercase;
             white-space: nowrap;
+            /* EFEITO PRATA METÁLICO QUE VOCÊ GOSTOU */
             background: linear-gradient(to bottom, #ffffff 0%, #e1e1e1 45%, #777 50%, #ffffff 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -50,86 +44,75 @@
         }
 
         .slogan { 
-            font-size: 10px; letter-spacing: 10px; color: #e31e24; 
-            margin-top: 15px; text-transform: uppercase; display: block; font-weight: 800; 
+            font-size: 11px; letter-spacing: 7px; color: #e31e24; 
+            margin-top: 12px; text-transform: uppercase; display: block; font-weight: 600; 
         }
 
-        .content { padding: 30px 20px; }
+        .content { padding: 25px; }
 
-        /* SERVIÇOS LEO02: TECNOLOGIA EMBARCADA */
+        /* SERVIÇOS COM ESCALA ELÁSTICA DO LEO01 */
         .service-item { 
-            background: #0a0a0a;
+            background: linear-gradient(145deg, #0d0d0d 0%, #050505 100%);
             border: 1px solid #1a1a1a;
-            padding: 24px; margin-bottom: 20px; 
-            border-radius: 25px;
-            position: relative;
-            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-            overflow: hidden;
-            box-shadow: inset 0 0 10px rgba(255,255,255,0.02);
+            padding: 22px; margin-bottom: 18px; 
+            border-radius: 22px;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
         }
 
         .service-item:hover { 
-            transform: scale(1.04);
+            transform: scale(1.03); 
             border-color: #e31e24;
-            background: linear-gradient(145deg, #151515 0%, #0a0a0a 100%);
-            box-shadow: 0 15px 35px rgba(227, 30, 36, 0.2);
+            box-shadow: 0 10px 25px rgba(227, 30, 36, 0.25);
         }
 
-        /* Brilho interno que aparece no hover */
-        .service-item::after {
-            content: "";
-            position: absolute; top: -50%; left: -50%;
-            width: 200%; height: 200%;
-            background: radial-gradient(circle, rgba(227,30,36,0.1) 0%, transparent 70%);
-            opacity: 0; transition: 0.5s;
-        }
-        .service-item:hover::after { opacity: 1; }
+        .service-link { text-decoration: none; display: flex; align-items: center; }
 
-        .service-link { text-decoration: none; display: flex; align-items: center; position: relative; z-index: 2; }
-        
-        .service-icon { 
-            font-size: 32px; margin-right: 20px; 
-            transition: 0.4s;
-            filter: grayscale(1) opacity(0.7);
-        }
-        .service-item:hover .service-icon { 
-            filter: grayscale(0) drop-shadow(0 0 10px #e31e24);
-            transform: scale(1.1) rotate(-5deg);
+        .service-icon {
+            font-size: 28px; margin-right: 20px;
+            filter: drop-shadow(0 0 5px rgba(227, 30, 36, 0.5));
         }
 
         .service-title { 
-            font-weight: 800; font-size: 14px; 
-            text-transform: uppercase; color: #f1f1f1; 
-            letter-spacing: 1.5px; margin-bottom: 5px;
+            font-weight: 700; font-size: 13px; 
+            text-transform: uppercase; color: #ffffff; 
+            letter-spacing: 1.2px; margin-bottom: 4px;
         }
-        .service-desc { font-size: 11px; color: #666; font-weight: 400; line-height: 1.4; transition: 0.3s; }
-        .service-item:hover .service-desc { color: #aaa; }
 
-        /* BOTÃO CONSULTOR: PULSO DE ENERGIA AGRESSIVO */
-        @keyframes energyPulse {
-            0% { box-shadow: 0 0 15px #e31e24, 0 0 0 0 rgba(227, 30, 36, 0.7); background: #e31e24; color: #fff; }
-            50% { box-shadow: 0 0 40px #ff0000, 0 0 0 20px rgba(227, 30, 36, 0); background: #ffffff; color: #000; }
-            100% { box-shadow: 0 0 15px #e31e24, 0 0 0 0 rgba(227, 30, 36, 0.7); background: #e31e24; color: #fff; }
+        .service-desc { 
+            font-size: 11px; color: #888; 
+            line-height: 1.4; font-weight: 400;
+        }
+
+        /* BOTÃO ALERTA PISCANTE DO LEO01 */
+        @keyframes alertFlash {
+            0% { background-color: #e31e24; box-shadow: 0 0 10px #e31e24; color: #fff; }
+            50% { background-color: #ffffff; box-shadow: 0 0 35px #ffffff; color: #000; }
+            100% { background-color: #e31e24; box-shadow: 0 0 10px #e31e24; color: #fff; }
         }
 
         .btn-contact { 
             display: block; 
-            padding: 26px; text-decoration: none; 
+            padding: 22px; text-decoration: none; 
             font-weight: 900; border-radius: 20px; 
-            text-transform: uppercase; letter-spacing: 4px; 
-            font-size: 14px; margin-top: 40px;
+            text-transform: uppercase; letter-spacing: 3px; 
+            font-size: 14px; margin-top: 30px;
             text-align: center;
-            animation: energyPulse 1s infinite ease-in-out;
-            border: 1px solid rgba(255,255,255,0.2);
+            animation: alertFlash 0.8s infinite;
         }
 
-        .social-area { text-align: center; padding: 40px; background: #000; border-top: 1px solid #111; }
-        .social-icons img { width: 28px; opacity: 0.3; margin: 0 18px; transition: 0.4s; filter: invert(1); }
-        .social-icons img:hover { opacity: 1; transform: scale(1.3); filter: invert(0) drop-shadow(0 0 15px #e31e24); }
+        .social-area { 
+            text-align: center; padding: 30px; 
+            background: #030303; border-top: 1px solid #1a1a1a;
+        }
+
+        .social-icons img { width: 26px; opacity: 0.6; margin: 0 15px; transition: 0.3s; filter: invert(1); }
+        .social-icons img:hover { opacity: 1; transform: scale(1.25); filter: invert(0); }
 
         .footer { 
-            text-align: center; padding: 40px 20px; 
-            font-size: 10px; color: #333; letter-spacing: 3px;
+            text-align: center; padding: 35px 20px; 
+            font-size: 10px; color: #555; 
+            background: #000000; letter-spacing: 1.5px;
+            border-top: 1px solid #1a1a1a;
         }
     </style>
 </head>
@@ -147,7 +130,7 @@
                 <span class="service-icon">🖥️</span>
                 <div class="service-text">
                     <div class="service-title">Diagnóstico Computadorizado</div>
-                    <div class="service-desc">Engenharia avançada Scania e Volvo.</div>
+                    <div class="service-desc">Tecnologia avançada especializada em Scania e Volvo.</div>
                 </div>
             </a>
         </div>
@@ -157,7 +140,7 @@
                 <span class="service-icon">💻</span>
                 <div class="service-text">
                     <div class="service-title">Reprogramação de Injeção</div>
-                    <div class="service-desc">Alta performance e precisão eletrônica.</div>
+                    <div class="service-desc">Otimização eletrônica para máxima potência e economia.</div>
                 </div>
             </a>
         </div>
@@ -167,7 +150,7 @@
                 <span class="service-icon">🔥</span>
                 <div class="service-text">
                     <div class="service-title">Limpeza e Descarbonização</div>
-                    <div class="service-desc">Tratamento premium de catalisadores.</div>
+                    <div class="service-desc">Processo avançado para catalisadores e filtros.</div>
                 </div>
             </a>
         </div>
@@ -177,7 +160,7 @@
                 <span class="service-icon">🧪</span>
                 <div class="service-text">
                     <div class="service-title">Sistema SCR Arla 32</div>
-                    <div class="service-desc">Manutenção técnica especializada.</div>
+                    <div class="service-desc">Soluções definitivas em pós-tratamento e sensores.</div>
                 </div>
             </a>
         </div>
@@ -187,7 +170,7 @@
                 <span class="service-icon">🎈</span>
                 <div class="service-text">
                     <div class="service-title">Suspensão a Ar</div>
-                    <div class="service-desc">Calibração e manutenção pneumática.</div>
+                    <div class="service-desc">Manutenção e calibração de sistemas pneumáticos.</div>
                 </div>
             </a>
         </div>
@@ -197,7 +180,7 @@
                 <span class="service-icon">⚙️</span>
                 <div class="service-text">
                     <div class="service-title">Válvulas APS e APM</div>
-                    <div class="service-desc">Reparo preventivo de alta precisão.</div>
+                    <div class="service-desc">Reparo especializado e preventivo de válvulas.</div>
                 </div>
             </a>
         </div>
@@ -206,8 +189,8 @@
             <a href="#" class="service-link">
                 <span class="service-icon">🛑</span>
                 <div class="service-text">
-                    <div class="service-title">ABS e EBS Eletrônico</div>
-                    <div class="service-desc">Segurança total para cavalo e carreta.</div>
+                    <div class="service-title">ABS e EBS</div>
+                    <div class="service-desc">Controle e segurança para cavalo e carreta.</div>
                 </div>
             </a>
         </div>
@@ -217,7 +200,7 @@
                 <span class="service-icon">🕹️</span>
                 <div class="service-text">
                     <div class="service-title">Câmbio Automatizado</div>
-                    <div class="service-desc">Calibração e ajuste de tecnologia embarcada.</div>
+                    <div class="service-desc">Ajustes finos e calibração eletrônica de embreagem.</div>
                 </div>
             </a>
         </div>
@@ -227,7 +210,7 @@
                 <span class="service-icon">📦</span>
                 <div class="service-text">
                     <div class="service-title">Vendas de Peças Novas</div>
-                    <div class="service-desc">Componentes diesel premium em estoque.</div>
+                    <div class="service-desc">Amplo estoque de componentes eletrônicos diesel.</div>
                 </div>
             </a>
         </div>
@@ -245,7 +228,7 @@
 
     <div class="footer">
         BR-364, KM 06 - VILHENA/RO<br>
-        <strong>EURO DIESEL | LUXURY PERFORMANCE</strong>
+        <strong>EURO DIESEL | HIGH PERFORMANCE</strong>
     </div>
 </div>
 
