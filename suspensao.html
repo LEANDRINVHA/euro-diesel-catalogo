@@ -54,7 +54,7 @@
             width: 100%;
             height: auto;
             display: block;
-            border-bottom: 2px solid #222; /* Linha separando os vídeos */
+            border-bottom: 2px solid #222;
         }
 
         .back-button {
@@ -97,12 +97,12 @@
         <div class="title-video">SISTEMA DE SUSPENSÃO A AR</div>
         
         <div class="video-wrapper">
-            <video autoplay muted controls playsinline>
+            <video id="video1" autoplay muted controls playsinline>
                 <source src="AR1.mp4" type="video/mp4">
                 Seu navegador não suporta vídeos.
             </video>
             
-            <video autoplay muted controls playsinline>
+            <video id="video2" controls playsinline>
                 <source src="AR.mp4" type="video/mp4">
                 Seu navegador não suporta vídeos.
             </video>
@@ -111,6 +111,17 @@
         <a href="index.html" class="back-button">← Voltar para Menu</a>
     </div>
 </div>
+
+<script>
+    const v1 = document.getElementById('video1');
+    const v2 = document.getElementById('video2');
+
+    // Quando o vídeo 1 acabar
+    v1.addEventListener('ended', function() {
+        // Toca o vídeo 2
+        v2.play();
+    });
+</script>
 
 </body>
 </html>
